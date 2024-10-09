@@ -9,6 +9,7 @@ import AwardsAchievementsSection from '@/components/AwardsAchievementsSection'
 import CustomerReviewsSection from '@/components/CustomerReviewsSection'
 import ContactUsSection from '@/components/ContactUsSection'
 import Footer from '@/components/Footer'
+import GetInTouch from '@/components/GetInTouch'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutUsSection />
       <OurServicesSection />
       <WhyChooseUsSection />
+      <GetInTouch/>
       <OurTeamSection />
       <NewsArticlesSection />
       <AwardsAchievementsSection />

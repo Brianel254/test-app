@@ -25,8 +25,8 @@ const services = [
   },
   {
     icon: Shield,
-    title: "Liability Insurance",
-    description: "Protect yourself and your business from potential lawsuits with our comprehensive liability coverage."
+    title: "Health Insurance",
+    description: "Secure your home and belongings with our policies designed to protect against loss or damage to your personal property."
   },
   {
     icon: Plane,
@@ -52,7 +52,7 @@ export default function OurServicesSection() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <Button asChild variant="outline" className="w-full border-green-500 text-green-500 hover:bg-green-50">
-                <Link href={`/services/${service.title.toLowerCase().replace(' ', '-')}`}>Learn More</Link>
+              <Link href={`/services/${service.title.split(' ')[0].toLowerCase()}`}> Learn More </Link>
               </Button>
             </div>
           ))}
