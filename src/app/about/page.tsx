@@ -11,6 +11,11 @@ import CommunityInputSection from '@/components/CommunityInputSection'
 import AwardsGallerySection from '@/components/AwardsGallerySection'
 import MissionVisionSection from '@/components/MissionVisionSection'
 
+export const metadata = {
+  title: "About Us",
+  description: "Learn more about our company and our mission.",
+};  
+
 export default function AboutPage() {
   return (
     <>

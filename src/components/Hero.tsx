@@ -41,10 +41,10 @@ export default function Hero() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  onClick={() => setIsScheduleCallOpen(true)}
+                  
                   className="bg-green-500 text-white hover:bg-green-600 text-lg py-6 px-8"
                 >
-                  <Link href="/#">Schedule a Call</Link>
+                  <Link href="/get-insured">Get Insured</Link>
                 </Button>
                 <ScheduleCallPopup
                   isOpen={isScheduleCallOpen}

@@ -4,6 +4,11 @@ import BlogHero from '@/components/BlogHero'
 import BlogGrid2 from '@/components/BlogGrid2'
 import blogData from './blog.json'
 
+export const metadata = {
+  title: "Blog",
+  description: "Stay informed with the latest news, tips, and insights about insurance and financial planning.",
+} 
+
 export default function Blog2Page() {
   return (
     <div className="flex flex-col min-h-screen">

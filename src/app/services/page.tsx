@@ -2,6 +2,12 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ServicesHero from '@/components/ServicesHero'
 import ServiceCard from '@/components/ServiceCard'
+import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description: "We offer a wide range of insurance solutions to meet your personal and business needs. Explore our services and find the perfect coverage for you.",
+};
 
 const services = [
   {

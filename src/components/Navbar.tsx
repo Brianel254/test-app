@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Menu, X, Phone, FileText, MessageCircle, Car, Home, Heart, Briefcase, Plane, Building } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,21 +11,40 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isScheduleCallOpen, setIsScheduleCallOpen] = useState(false)
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false)
+  const megaMenuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
+        setIsMegaMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Get Insured', href: '/get-insured' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog-2' }
+  ]
+
+  const services = [
+    { name: 'Auto Insurance', icon: Car, href: '/services/auto' },
+    { name: 'Home Insurance', icon: Home, href: '/services/home' },
+    { name: 'Life Insurance', icon: Heart, href: '/services/life' },
+    { name: 'Health Insurance', icon: Heart, href: '/services/health' },
+    { name: 'Travel Insurance', icon: Plane, href: '/services/travel' },
+    { name: 'Business Insurance', icon: Building, href: '/services/business' },
   ]
 
   return (
@@ -45,7 +64,100 @@ export default function Navbar() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {menuItems.map((item) => (
+                <Link href="/" className="text-gray-800 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium">
+                  Home
+                </Link>
+                <div className="relative" ref={megaMenuRef}>
+                  <button
+                    className="text-gray-800 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium"
+                    onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                  >
+                    Our Services
+                  </button>
+                  {isMegaMenuOpen && (
+                    <div className="absolute top-full left-2/3 transform -translate-x-1/2 w-screen max-w-4xl bg-white shadow-lg rounded-b-lg p-6">
+                      <div className="grid grid-cols-9 gap-6">
+                        <div className="col-span-3">
+                          <Image
+                            src="/get-insured.jpg?height=200&width=300"
+                            alt="Get Insured"
+                            width={300}
+                            height={200}
+                            className="rounded-lg mb-4"
+                          />
+                          <h3 className="text-lg font-semibold mb-2">Are you ready to get insured? </h3>
+                          <Link href="/get-a-quote">
+                            <Button className="w-full bg-green-500 text-white hover:bg-green-600">
+                              Get a Quote
+                            </Button>
+                          </Link>
+                        </div>
+                        <div className="col-span-3">
+                          <ul className="space-y-4">
+                            <li>
+                              <Link href="/claims" className="flex items-start">
+                                <FileText className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                                <div>
+                                  <h4 className="font-semibold">File a Claim</h4>
+                                  <p className="text-sm text-gray-600">Start your claim process here</p>
+                                </div>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/contact" className="flex items-start">
+                                <MessageCircle className="h-6 w-6 text-green-500 mr-2 flex-shrink-0" />
+                                <div>
+                                  <h4 className="font-semibold">Contact Us</h4>
+                                  <p className="text-sm text-gray-600">Get in touch with our team</p>
+                                </div>
+                              </Link>
+                            </li>
+                          </ul>
+                          {/* services list */}
+                          <h3 className="text-lg font-semibold my-4">Our Services</h3>
+                          <ul className="grid grid-cols-2 gap-5  overflow-x-visible text-nowrap">
+                            {services.map((service) => (
+                              <li key={service.name}>
+                                <Link href={service.href} className="flex items-center">
+                                  <service.icon className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                                  <span className="text-sm">{service.name}</span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        {/* social icons */}
+                        <div className="col-span-3 h-fit">
+                          <h3 className="text-lg font-semibold mb-4">Connect with Us</h3>
+                          <ul className="space-y-4">
+                            <li>
+                              <Link href="https://wa.me/+254733844802" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                <img src="/whatsapp-icon.svg" alt="WhatsApp" className="h-6 w-6 text-green-500 mr-2" />
+                                <span className="text-sm">WhatsApp</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="https://www.facebook.com/jimmysinsuranceagency" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                <img src="/facebook-icon.svg" alt="Facebook" className="h-6 w-6 text-blue-500 mr-2" />
+                                <span className="text-sm">Facebook</span>
+                              </Link>
+                            </li>
+                            <li>
+                              <a href="tel:+254733844802" className="flex items-center">
+                                <img src="/phone-icon.svg" alt="Call" className="h-6 w-6 text-green-500 mr-2" />
+                                <span className="text-sm">Call Us</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {menuItems.slice(1).map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -101,16 +213,48 @@ export default function Navbar() {
               </button>
             </div>
             <div className="flex-grow grid grid-cols-2 gap-4 p-4">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span className="text-xl font-medium">{item.name}</span>
-                </Link>
-              ))}
+              <Link
+                href="/"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">Home</span>
+              </Link>
+              <Link
+                href="/services"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">Our Services</span>
+              </Link>
+              <Link
+                href="/blog-2"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">Blog</span>
+              </Link>
+              <Link
+                href="/contact"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">Contact</span>
+              </Link>
+              <Link
+                href="/get-insured"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">Get Insured</span>
+              </Link>
+              <Link
+                href="/claims"
+                className="flex items-center justify-center h-32 bg-gray-100 rounded-lg text-gray-800 hover:bg-green-500 hover:text-white transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="text-xl font-medium">File a Claim</span>
+              </Link>
             </div>
             <div className="p-4">
               <Button

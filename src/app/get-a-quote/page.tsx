@@ -1,6 +1,12 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import QuoteForm from '@/components/QuoteForm'
+import { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
+
+export const metadata: Metadata = {
+  title: "Get A Quote",
+  description: "Get a quote for your insurance needs. Fill out the form and our team will get back to you as soon as possible.",
+};
 
 export default function GetAQuotePage() {
   return (

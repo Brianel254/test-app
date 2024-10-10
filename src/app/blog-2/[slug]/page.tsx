@@ -10,6 +10,11 @@ import blogData from '../blog.json'
 import Hero1 from '@/components/Hero1'
 
 
+//add metadata for this page using title and description of the post
+
+
+
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const [searchTerm, setSearchTerm] = useState('')
   const post = blogData.posts.find(p => p.id === params.slug)
