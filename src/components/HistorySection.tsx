@@ -8,7 +8,7 @@ export default function HistorySection() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our History</h2>
             <p className="text-lg text-gray-700 mb-4">
-              Founded in 2005, Jimmy's Insurance Agency has been a cornerstone of the Nairobi insurance landscape for over 15 years. Our journey began with a simple mission: to provide personalized, reliable insurance solutions to individuals and businesses in our community.
+              Jimmy's Insurance Agency has been a cornerstone of the Nairobi insurance landscape for over 5 years. Our journey began with a simple mission: to provide personalized, reliable insurance solutions to individuals and businesses in our community.
             </p>
             <p className="text-lg text-gray-700 mb-4">
               Over the years, we've grown from a small local agency to a trusted name in insurance across Kenya. Our commitment to excellence, customer service, and innovative solutions has allowed us to expand our offerings and serve a diverse clientele.

@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Input } from '@/components/ui/input'
 import blogData from '../blog.json'
+import Hero1 from '@/components/Hero1'
+
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const [searchTerm, setSearchTerm] = useState('')
@@ -25,13 +27,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <Hero1 
+        title={post.title}
+        description= {post.author}
+      />
       <main className="flex-grow">
-        <section className="bg-green-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-            <p className="text-xl">by {post.author}</p>
-            <p className="text-lg">{post.date}</p>
-          </div>
+        <section className="py-4 bg-white">
+
         </section>
         <div className="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
           <article className="lg:w-2/3">
@@ -42,11 +44,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               height={400}
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
-            <div className="prose max-w-none">
+            <div className="prose px-5 max-w-3xl">
               <p>{post.content}</p>
             </div>
           </article>
-          <aside className="lg:w-1/3">
+          <aside className="lg:w-1/3 mt-2" >
             <div className="sticky top-4">
               <Input
                 type="search"

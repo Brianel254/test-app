@@ -8,12 +8,12 @@ import { useState } from 'react'
 
 export default function Hero() {
   const partners = [
-    { name: 'Partner 1', logo: '/fast-assurance-1.svg' },
-    { name: 'Partner 2', logo: '/uap-1.svg' },
-    { name: 'Partner 3', logo: '/mayfair-1.svg' },
-    { name: 'Partner 4', logo: '/kenindia.svg' },
-    { name: 'Partner 5', logo: '/fast-assurance-1.svg' },
-    { name: 'Partner 6', logo: '/mayfair-1.svg' },
+    { name: 'Partner 1', logo: '/fastassurance.png' },
+    { name: 'Partner 2', logo: '/britam.png' },
+    { name: 'Partner 3', logo: '/mayfair.png' },
+    { name: 'Partner 4', logo: '/kenindia.png' },
+    { name: 'Partner 5', logo: '/geminia.png' },
+    { name: 'Partner 6', logo: '/ga.png' },
   ]
   const [isScheduleCallOpen, setIsScheduleCallOpen] = useState(false)
 

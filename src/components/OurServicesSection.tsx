@@ -26,7 +26,7 @@ const services = [
   {
     icon: Shield,
     title: "Health Insurance",
-    description: "Secure your home and belongings with our policies designed to protect against loss or damage to your personal property."
+    description: "Customized to meet your budget and health requirements. We make certain that no one is left behind."
   },
   {
     icon: Plane,

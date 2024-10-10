@@ -65,7 +65,7 @@ export default function BlogGrid2({ posts }: BlogGrid2Props) {
               <span>{post.date}</span>
             </div>
             <Link href={`/blog-2/${post.id}`}>
-              <Button className="w-full mb-4">Read More</Button>
+              <Button className="w-full mb-4 bg-green-500 hover:bg-green-600">Read More</Button>
             </Link>
             <div className="flex justify-between items-center">
               <Button

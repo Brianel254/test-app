@@ -81,21 +81,22 @@ export default function ContactUsSection() {
               <Phone className="w-6 h-6 text-green-500 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                <p className="text-gray-600">+254 123 456 789</p>
+                <p className="text-gray-600">+254 733 844 802</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
               <Mail className="w-6 h-6 text-green-500 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                <p className="text-gray-600">info@jimmysinsurance.com</p>
+                <p className="text-gray-600">info@jimmysinsuranceagency.com</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
               <MapPin className="w-6 h-6 text-green-500 flex-shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                <p className="text-gray-600">123 Insurance Street, Nairobi, Kenya</p>
+                <p className="text-gray-600">Pamba Road, Pangani. <br/> P.O Box. 40715 – 00100 Nairobi, Kenya.
+                </p>
               </div>
             </div>
           </div>

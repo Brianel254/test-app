@@ -16,24 +16,24 @@ interface Review {
 const reviews: Review[] = [
   {
     id: 1,
-    name: "John Doe",
-    avatar: "/placeholder.svg?height=80&width=80",
+    name: "Jagtap T. Kakasahe -General Manager Bigot Flowers Kenya Ltd",
+    avatar: "/bigot.png",
     rating: 5,
-    text: "Jimmy's Insurance Agency provided exceptional service. They found the perfect coverage for my needs at a great price."
+    text: "Jimmy’s Insurance Agency Ltd. has been our trusted insurance broker for all our company needs. We highly recommend their professional and reliable services."
   },
   {
     id: 2,
-    name: "Jane Smith",
-    avatar: "/placeholder.svg?height=80&width=80",
-    rating: 4,
-    text: "I've been with Jimmy's for years. Their customer support is top-notch, and they always go above and beyond."
+    name: "VC Krishna - General Manager IET Ltd",
+    avatar: "/vc-krishna.jpg",
+    rating: 5,
+    text: "Jimmy’s Insurance Agency are always professional, helpful, and they have always been able to get us the best possible rates on our insurance. We would not hesitate to recommend Jimmy’s Insurance Agency Ltd to any company looking for a reliable insurance agent."
   },
   {
     id: 3,
-    name: "Mike Johnson",
-    avatar: "/placeholder.svg?height=80&width=80",
+    name: "Lewis Wafula - Facilities and Administration Manager, Majorel Kenya Ltd.",
+    avatar: "/majorel.jpg",
     rating: 5,
-    text: "The team at Jimmy's made insurance easy to understand. I feel confident knowing I have the right coverage."
+    text: "We at Major Kenya Limited have been working with Jimmy’s Insurance Agency Ltd. for over a year and we have been very impressed with their service. We have found them effective, reliable and sensitive to our needs."
   }
 ]
 

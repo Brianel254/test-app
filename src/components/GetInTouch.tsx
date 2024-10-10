@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 export default function GetInTouch() {
   return (
     <section className="py-12 bg-green-500">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto max-w-4xl px-4 text-center">
         <h2 className="text-3xl font-semibold text-white mb-4">Ready to Get Started?</h2>
         <p className="text-white text-lg mb-8">Contact us today to learn more about our insurance solutions and how we can help protect what matters most to you.</p>
         <div className="space-x-4">

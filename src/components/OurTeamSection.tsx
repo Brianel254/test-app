@@ -14,10 +14,10 @@ const teamMembers = [
     bio: "Raytone's deep understanding of risk assessment ensures our clients receive the best coverage possible."
   },
   {
-    name: "Emily Brown",
-    role: "Customer Relations Manager",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Emily's dedication to client satisfaction has been key to our agency's growth and stellar reputation."
+    name: "Benson Mutua",
+    role: "General Underwriter",
+    image: "/ben.png?height=300&width=300",
+    bio: "Benson's dedication to client satisfaction has been key to our agency's growth and stellar reputation."
   },
   {
     name: "Franklyne Obunia",

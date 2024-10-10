@@ -21,9 +21,9 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <p className="text-gray-400">123 Insurance Street, Nairobi, Kenya</p>
-            <p className="text-gray-400">Phone: +254 123 456 789</p>
-            <p className="text-gray-400">Email: info@jimmysinsurance.com</p>
+            <p className="text-gray-400">Pamba Road, Pangani. P.O Box. 40715 – 00100 Nairobi, Kenya</p>
+            <p className="text-gray-400">Phone: +254 733 844 802</p>
+            <p className="text-gray-400">Email: info@jimmysinsuranceagency.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
