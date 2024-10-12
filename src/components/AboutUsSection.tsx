@@ -19,10 +19,8 @@ export default function AboutUsSection() {
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-3xl font-bold text-gray-900">About Jimmy's Insurance Agency</h2>
             <p className="text-lg text-gray-700">
-              Jimmy's Insurance Agency Ltd. has been a trusted name in Kenya's insurance landscape for over 5 years. We pride ourselves on providing personalized insurance solutions that cater to the unique needs of our clients, both individuals and businesses alike.
-            </p>
-            <p className="text-lg text-gray-700">
-              Our team of experienced professionals is dedicated to ensuring that you receive the best coverage at competitive rates. We understand that insurance can be complex, which is why we're committed to guiding you through every step of the process with clarity and transparency.
+              Jimmy's Insurance Agency Ltd. has been a trusted name in Kenya's insurance landscape for over 5 years.
+               Our team of experienced professionals is dedicated to ensuring that you receive the best coverage at competitive rates. We understand that insurance can be complex, which is why we're committed to guiding you through every step of the process with clarity and transparency.
             </p>
             <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
               <li>Comprehensive range of insurance products</li>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Jimmy's Insurance Agency</h3>
-            <p className="text-gray-400">Your trusted partner for comprehensive insurance solutions in Nairobi.</p>
+            <p className="text-gray-400">Your trusted partner for comprehensive insurance solutions in Kenya, providing personalized insurance solutions that cater to your unique needs, both individuals and businesses alike.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>

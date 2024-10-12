@@ -34,7 +34,7 @@ export default function Hero() {
                 Award Winning Agency
               </span>
               <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-                Quick and Reliable Insurance Solutions in Nairobi
+                Quick and Reliable Insurance Solutions in Kenya
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Jimmy's Insurance Agency Ltd is your trusted partner for personalized business and personal insurance solutions, ensuring comprehensive coverage and quick claims processing.
