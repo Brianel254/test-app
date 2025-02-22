@@ -13,7 +13,7 @@ export default function AboutUsSection() {
               alt="About Jimmy's Insurance Agency"
               width={600}
               height={600}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-none"
             />
           </div>
           <div className="w-full lg:w-1/2 space-y-6">
