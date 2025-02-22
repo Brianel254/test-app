@@ -229,8 +229,8 @@ export default function QuoteForm() {
             <Input
               type="text"
           //    name="liabilityLimit"
-              placeholder="Limit of Liability"
-              {...register("liabilityLimit")}
+              placeholder="Class of Insurance:(private, PSV ...)"
+              {...register("classofinsurance")}
             />
           </TabsContent>
           <TabsContent value="Home" className="space-y-4">
