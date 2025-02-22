@@ -14,9 +14,9 @@ const teamMembers = [
     bio: "Raytone's deep understanding of risk assessment ensures our clients receive the best coverage possible."
   },
   {
-    name: "Benson Mutua",
+    name: "Hillary Ooko",
     role: "General Underwriter",
-    image: "/ben.png?height=300&width=300",
+    image: "/hillary.png?height=300&width=300",
     bio: "Benson's dedication to client satisfaction has been key to our agency's growth and stellar reputation."
   },
   {
