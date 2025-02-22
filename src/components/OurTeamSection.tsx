@@ -17,7 +17,7 @@ const teamMembers = [
     name: "Hillary Ooko",
     role: "General Underwriter",
     image: "/hillary.png?height=300&width=300",
-    bio: "Benson's dedication to client satisfaction has been key to our agency's growth and stellar reputation."
+    bio: "Hilarry's dedication to client satisfaction has been key to our agency's growth and stellar reputation."
   },
   {
     name: "Franklyne Obunia",
